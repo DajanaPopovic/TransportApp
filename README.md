@@ -1,15 +1,15 @@
-# Multimodalni Sistem za Pronalaženje Optimalne Rute unutar Države
+# Sistem za Pronalaženje Optimalne Rute unutar Države
 
 Ovaj projekat predstavlja rješenje projektnog zadatka u okviru predmeta **Programski jezici 2** na Elektrotehničkom fakultetu Banja Luka. Aplikacija omogućava pronalaženje i vizualizaciju optimalne rute između gradova kombinovanjem autobuskog i željezničkog saobraćaja.
 
 ## Karakteristike aplikacije
 
-* **Modelovanje države:** Država je predstavljena kao matrica gradova dimenzija $n \times m$. Svaki grad posjeduje autobusku ($A\_X\_Y$) i željezničku ($Z\_X\_Y$) stanicu koje čine čvorove u grafu saobraćajne mreže.
+* **Modelovanje države:** Država je predstavljena kao matrica gradova dimenzija nxm. Svaki grad posjeduje autobusku (A_X_Y) i željezničku (Z_X_Y) stanicu koje čine čvorove u grafu saobraćajne mreže.
 * **Višekriterijumska optimizacija:** Pronalaženje top 5 ruta na osnovu:
   * Najkraćeg vremena putovanja (uzimajući u obzir minimalno vrijeme čekanja na presjedanje),
   * Najniže cijene karte,
   * Najmanjeg broja presjedanja.
-* **Grafički interfejs (JavaFX):** Interaktivni prikaz mape, forme za izbor parametara, tabelarni pregled optimalne rute i vizualizacija grafa pomoću GraphStream biblioteke.
+* **Grafički interfejs (JavaFX):** Interaktivni prikaz mape, forme za izbor parametara, tabelarni pregled optimalne rute i vizualizacija grafa pomoću JavaFX Canvas biblioteke.
 * **Perzistencija podataka:** Učitavanje topologije iz JSON fajla i perzistentno čuvanje izdatih računa u tekstualnom formatu, uz analizu ukupnog prihoda pri pokretanju.
 
 ## Tehnologije i biblioteke
@@ -39,6 +39,7 @@ Ovaj projekat predstavlja rješenje projektnog zadatka u okviru predmeta **Progr
    Ili otvorite projekat u IntelliJ IDEA i pokrenite `Main.java`.
 
 ## Struktura projekta
+```
 src/main/java/com/transportapp/
 ├── Main.java
 ├── generator/       # Generisanje JSON podataka o transportnoj mreži
@@ -46,6 +47,7 @@ src/main/java/com/transportapp/
 ├── gui/             # Grafički interfejs (JavaFX)
 ├── model/           # Modeli podataka (City, Station, Departure...)
 └── routing/         # Algoritmi za pronalaženje optimalne rute
+```
 
 
 ## Autor
